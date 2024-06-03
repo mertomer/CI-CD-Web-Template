@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Portfolyo Web Design</title>
+
+    <!-- Turkce karakter -->
+    <meta charset="utf-8" />
+
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- favicon -->
+    <link rel="icon" href="images/logo.jpg" />
+
+    <!-- seo -->
+    <meta name="keywords" content="html5,css3,js,jquery,bootstrap,react,es5,es6,java,spring boot" />
+    <meta name="description" content="my portfolyo sites, html5,css3,js,jquery,bootstrap,seo" />
+    <meta name="author" content="Mert Bakar" />
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap" rel="stylesheet">
+
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!-- react libraries -->
+    <!-- <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> -->
+
+    <!-- wow js-->
+    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init() </script>
+
+    <!-- animate CSS-->
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--sweet alert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Template: http://preview.themeforest.net/item/brittville-real-estate-html-website-template/full_screen_preview/21989882?_ga=2.66941866.56560517.1678623768-824740461.1678623768&_gac=1.213715488.1678623768.EAIaIQobChMIq6-H6bDW_QIVkrHVCh2YYgDQEAAYASAAEgKUavD_BwE -->
+
+<body data-bs-spy="scroll" data-bs-target="#navbar_second">
+    <!-- start codes -->
+    <noscript>
+        Bu browser Javascript'i desteklemiyor.
+    </noscript>
+
+    <!-- start first navbar -->
+    <nav id="navbar_first">
+        <!-- div.top_bar>div.container>div.row>(div.col-lg-7.col-md-9.col-xs-12>ul.clearfix.links>(li>i)*3)+(div.col-lg-5.col-md-3.col-xs-12>div.first_right>a{Login}+a{Register}) -->
+        <div class="top_bar">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-7 col-md-9 col-xs-12 ">
+                        <ul class="first_left my_clearfix">
+                            <li>
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>1-800-555-1234</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>info@example.com</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-regular fa-id-card"></i>
+                                <span> Turkey Blvd</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-3 col-xs-12">
+                        <div class="first_right my_clearfix">
+                            <ul>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#login_id"><i
+                                            class="fa-solid fa-right-to-bracket"></i></a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#register_id"><i
+                                            class="fa-solid fa-user-secret"></i></a></li>
+                                <li><a onclick="dark_light()"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login_id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="register_id" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog">
+        <div class="modal-dialog  modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="m-4" method="post" action="#">
+                        <div class="mb-3">
+                            <label for="nickname" class="form-label">Nickname</label>
+                            <input type="text" class="form-control" id="nickname" required aria-describedby="nicknameValidation">
+                            <div id="nicknameValidation" class="form-text text-danger"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" required aria-describedby="emailValidation">
+                            <div id="emailValidation" class="form-text text-danger"></div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <label for="passwd" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="passwd" required aria-describedby="passwdValidation">
+                            <div id="passwdValidation" class="form-text text-danger"></div>
+                        </div>
+ 
+                        <button type="reset" class="btn btn-danger btn-sm">Temizle</button>
+                        <button type="submit" id="registerSubmit" class="btn btn-primary btn-sm">Gönder</button>
+                        <input type="button" class="btn btn-danger btn-sm" value="Kapat" data-bs-dismiss="modal"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- start second navbar -->
+    <nav id="navbar_second" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" id="logo" alt="isn't showing logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Anasayfa <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our_work">Çalışmalar</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#counter_work">Projeler</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parallax_work">Haber</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme_work">Hakkımızda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog_work">Blog</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Contact</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#contact_work">Map</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" id="search_id" type="text" placeholder="Arama için ...">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start header -->
+    <header id="header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="images/header1.jpg" class="w-100 d-block" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/header2.jpg" class="w-100 d-block" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/header3.jpg" class="w-100 d-block" alt="Third slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden ">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start main -->
+    <main>
+        <!-- start our_work: ÇALIŞMALAR  -->
+        <section id="our_work">
+            <!-- div>h2.text-center.text-uppercase.display-3{Çalışmalarımız}+div.container>div.row>div.col-12.col-md-3.col-xl-4.text-center>i+h4{Eticaret}+p{lorem}+button.btn.btn-primary{less more...} -->
+            <div>
+                <h2 class="text-center text-uppercase display-3 mb-5 animate__animated animate__bounceInRight animate__delay-1s">Çalışmalarımız</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 col-xl-4 text-center animate__animated animate__bounceInLeft animate__delay-2s" >
+                    <i class=" fa-solid fa-dumpster-fire text-success"></i>
+                            <h4>E-Ticaret</h4>
+                            <p class="line-clamp6 ">Bu özellik yeni eklendiii</p>
+                            <p class="line-clamp6">ndansa</p>
+                            <button class="btn btn-primary mb-3">less more...</button>
+                        </div>
+                        <div
+                            class="col-12 col-md-3 col-xl-4 text-center animate__animated animate__bounceInLeft animate__delay-3s">
+                            <i class="fa-solid fa-flask-vial text-danger"></i>
+                            <h4>Project</h4>
+                            <p class="line-clamp6 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat,
+                                nam sed. Quisquam veritatis eligendi soluta, animi sit magnam? Earum vitae sequi in
+                                facilis placeat dolores deserunt modi obcaecati, sint veniam.
+                                Similique laboriosam blanditiis quod ipsum accusantium minima fugiat ab reiciendis. Iste
+                                impedit accusamus repellat quae reiciendis assumenda sit! Deserunt, debitis. Mollitia
+                                corporis deleniti tempora, odit expedita esse in repellat quas.</p>
+                            <button class="btn btn-primary mb-3">less more...</button>
+                        </div>
+                        <div
+                            class="col-12 col-md-3 col-xl-4 text-center animate__animated animate__bounceInLeft animate__delay-4s">
+                            <i class="fa-solid fa-cloud-arrow-up text-primary"></i>
+                            <h4>E-Cloud</h4>
+                            <p class="line-clamp6 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat,
+                                nam sed. Quisquam veritatis eligendi soluta, animi sit magnam? Earum vitae sequi in
+                                facilis placeat dolores deserunt.</p>
+                            <button class="btn btn-primary mb-3">less more...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end our_work  -->
+
+        <!-- start counter_work: PROJELER  -->
+        <section id="counter_work">
+            <div>
+                <h2 class="text-center text-uppercase display-3 mb-5 animate__animated animate__bounceInLeft animate__delay-3s">Projelerimiz</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 col-xl-4 mb-5 text-center animate__animated animate__bounceIn">
+                            <i class="fa-regular fa-clock"></i>
+                            <p class="text-center">Çalışma Saati</p>
+                            +<span class="counter">650</span>
+                        </div>
+
+                        <div class="col-12 col-md-3 col-xl-4 mb-5 text-center animate__animated animate__bounceIn">
+                            <i class="fa-solid fa-diagram-project text-warning"></i>
+                            <p class="text-center ">Projeler</p>
+                            +<span class="counter">25</span>
+                        </div>
+
+                        <div class="col-12 col-md-3 col-xl-4 mb-5 text-center animate__animated animate__bounceIn">
+                            <i class="fa-solid fa-people-arrows text-info"></i>
+                            <p class="text-center">Customer</p>
+                            +<span class="counter">1,234,567</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end our_work  -->
+
+        <!-- start parallax_work : HABERLER  -->
+        <!-- section#parallax_work>div.container>div.row>h2.text-center>p{lorem*10}+button.btn.btn-primary{More ..} -->
+        <section id="parallax_work" class="animate__animated animate__bounceInRight animate__delay-3s">
+            <h2 class="text-center text-uppercase display-3">Son haber</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Information</h4>
+                        <a href="http://www.ecodation.com"><img src="images/main3.jpg" alt=""></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://www.linkedin.com/in/mertbakar/">
+                            <h4>Java Big Data</h4>
+                            <p class="line-clamp16">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut officia iure omnis ex, esse
+                                quam
+                                perferendis, cupiditate vel animi porro voluptas? Enim, sed. Tempore esse similique
+                                provident culpa, et at!
+                                Explicabo odit repellendus exercitationem aliquam non eum, voluptatum cupiditate quasi
+                                voluptates minima corporis esse mollitia doloremque ea vitae nulla recusandae ipsa sunt
+                                molestias laborum at et! Voluptate aut fugiat ducimus.
+                                Pariatur suscipit repellendus ducimus! Impedit quo perspiciatis officiis delectus ad
+                                laudantium similique non obcaecati odit ea, modi assumenda quidem, at repellendus, vitae
+                                magni quos sint suscipit excepturi tempore natus itaque!
+                                Provident dolorem esse iusto corrupti ipsum, odio quod? Magnam fugiat eveniet laboriosam
+                                minus suscipit optio inventore expedita molestias sint ex architecto voluptatem nisi,
+                                unde
+                                ipsum, distinctio est dicta temporibus reiciendis!
+                                Voluptas qui culpa saepe ipsum itaque fuga, odio ea quia voluptatum, totam modi animi
+                                ipsam
+                                aspernatur molestiae vero corporis. Necessitatibus quod quas aliquam, nobis veniam et
+                                accusantium beatae vitae commodi?
+                                Quasi quibusdam dicta perspiciatis delectus quos praesentium magni debitis excepturi?
+                                Voluptatibus vitae aperiam necessitatibus voluptas, numquam, explicabo error ratione
+                                nulla,
+                                cupiditate dolor fugiat sequi? Veritatis enim vel optio modi veniam.
+                                Libero, dolorum. Voluptate illum optio vero ipsa voluptas, quisquam enim possimus
+                                accusamus
+                                aut nisi harum explicabo, hic nihil esse beatae iusto. Nemo totam saepe voluptas
+                                consequatur
+                                ad dolores magnam velit.
+                                Laborum error, consectetur modi iure distinctio maiores impedit aspernatur, voluptates,
+                                commodi et placeat assumenda nihil sunt itaque sed facilis blanditiis facere vel quia
+                                eum
+                                repudiandae dolores earum dolorum veniam. Cupiditate?
+                                Hic voluptate, nemo nesciunt aliquam laudantium minus rerum nobis accusamus ut quisquam?
+                                Libero facere dolor architecto repellendus tempora temporibus necessitatibus distinctio
+                                aliquid corrupti, nostrum accusamus pariatur earum, quisquam ducimus. Cupiditate.
+                                Maxime vero assumenda doloremque dolorem fuga aspernatur excepturi deserunt. Velit
+                                possimus
+                                tenetur eveniet ipsa culpa doloremque dolorum, expedita nemo consectetur. Tempore, fuga.
+                                Quo
+                                velit eius fugit, dolore omnis quae asperiores.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end parallax_work  -->
+
+        <!-- end aboutme_work : HAKKIMIZDA  -->
+        <!-- section#aboutme_work>div.container>div.row>h2{Hakkımızda}+p#about_paragraf{lorem*10}+button.btn.btn-primary{Detail}
+         -->
+        <section id="aboutme_work" class="animate__animated animate__bounceInLeft animate__delay-3s">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center text-uppercase display-3">Hakkımızda</h2>
+                    <a href="http://www.google.com">
+                    <p id="about_paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora dolores
+                        molestias architecto veniam quas ducimus, ipsam repudiandae reprehenderit? Rem voluptatem
+                        temporibus nostrum possimus, iusto soluta maiores deleniti reiciendis amet.
+                        Sint ducimus odio mollitia. Quia maiores, hic voluptatem, eum similique commodi pariatur itaque
+                        voluptas quis minima magnam fuga reiciendis totam unde, ad neque magni fugiat corporis. Commodi
+                        eaque laboriosam doloribus.
+                        Dolores dolorem, neque deleniti veritatis molestiae nisi, ullam, aspernatur earum illo nesciunt
+                        libero placeat labore possimus perspiciatis ab doloribus tempore illum aliquid mollitia repellat
+                        fugit! Quidem iusto commodi ad alias?
+                        Labore tempora tempore sequi quo deleniti assumenda magnam inventore velit qui eos voluptatum,
+                        magni odio dignissimos, architecto sed dicta recusandae at exercitationem quisquam laudantium
+                        pariatur consectetur veritatis. Numquam, labore non.
+                        Repellendus labore assumenda quidem exercitationem commodi adipisci neque facilis voluptate
+                        veniam aperiam, nemo quibusdam facere ea saepe, vitae numquam praesentium nisi sint dicta
+                        repellat, obcaecati ipsa! Deserunt soluta cupiditate possimus.
+                        Laborum dignissimos, dolorum nisi impedit cupiditate nemo, laudantium labore rerum illo nam cum
+                        in vel facere, architecto vitae aut sed illum earum ab dolorem modi velit ducimus. Quo, cumque
+                        maxime!
+                        Optio doloribus cum unde earum itaque vel perspiciatis soluta eveniet labore ipsa! Ipsam eum
+                        beatae animi quo odio nulla non, at, quisquam, adipisci vel laborum molestias? Obcaecati eum vel
+                        sunt.
+                        Eaque, iure quaerat. Sint, nisi hic pariatur numquam iure, consequuntur tenetur, doloremque
+                        sapiente dicta dolores nobis amet sunt dignissimos nostrum dolorem facilis reprehenderit quos
+                        mollitia accusantium fugiat enim? At, totam.
+                        Quisquam perferendis laborum excepturi distinctio rem vitae illum tempore totam ex veniam
+                        blanditiis, quasi beatae pariatur qui suscipit esse et atque praesentium id odio repellendus est
+                        minus aliquid. Quo, corrupti!
+                        Facere iusto aliquid error vel, ut nulla inventore soluta corporis explicabo assumenda, quia,
+                        porro quos incidunt facilis odio accusamus quas harum et? Id ullam quae atque enim provident
+                        perferendis mollitia!</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- end aboutme_work  -->
+
+        <!-- start blog_work : BLOG  -->
+        <!-- section#blog_work>div.container>div.row>h2{Blog}>div.col-md-3>div.card>img>div.card-body>h4.card-title{Title}+p.card-text{lorem*2} -->
+        <section id="blog_work" class="animate__animated animate__bounceIn">
+            <h2>Blog</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main1.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main2.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main3.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main4.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main1.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/main2.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                                    fugit cum, at beatae ipsa ab accusamus quo officiis, eveniet consequatur, corrupti
+                                    doloribus possimus exercitationem? Praesentium a eveniet odit tempore recusandae.
+                                    Id eaque eveniet nisi veniam sed, ex quo ducimus animi hic commodi aliquid omnis
+                                    amet quasi nam iste? Sed assumenda quos modi nisi a illo consequuntur ab, inventore
+                                    officia quam?</p>
+                                <button class="btn btn-primary btn-sm float-end">More...</button> <br>
+                                <span class="text-muted float-end">01/01/2023</span>
+                            </div>
+                            </img>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end blog_work  -->
+
+        <!-- start contact_work  -->
+        <!-- section#contact_work>div.container>div.row>div.col-md-12>h2{Contact}^^div.col-md-6*2 -->
+        <section id="contact_work" class="animate__animated animate__bounceInLeft animate__delay-3s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-6">
+                        <!-- https://www.embed-map.com/ -->
+                        <div id="map">
+                            <div id="google-maps-canvas" style="height:500px; max-width:100%;">
+                                <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                                    src="https://www.google.com/maps/embed/v1/place?q=Malatya+Merkez,+Türkiye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Contact</h2>
+                        <form id="c_form">
+                            <div class="form-group mb-2">
+                                 <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="fullname">
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="email">
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <input type="tel" class="form-control" id="tel"
+                                    aria-describedby="emailHelp" placeholder="tel">
+                            </div>
+
+                            <div class="form-group shadow-textarea mb-2">
+                                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="8"
+                                    placeholder="Please write me !"></textarea>
+                            </div>
+                            <div class="mt-3 mb-2">
+                                <button type="reset" class="btn btn-danger">Temizle</button>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end contact_work  -->
+    </main>
+    <!-- end main -->
+
+     <!-- start backtoTop -->
+     <a href="#header" id="back_top" class="animate__animated animate__bounceInLeft"><i class="fa-solid fa-arrow-up-short-wide"></i></a>
+      <!-- end backtoTop -->
+
+    <!-- start footer -->
+    <footer class="text-center">
+        <!-- section#footer_top>div.container>div.row>(div.col-md-3.col-lg-4.col-xl-3.mx-auto.shadow)*4-->
+        <section id="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-4 col-xl-3  shadow">
+                        <h5 class="text-capitalize">About Us</h5>
+                        <ul>
+                            <li><a href="">item 1</a></li>
+                            <li><a href="">item 2</a></li>
+                            <li><a href="">item 3</a></li>
+                            <li><a href="">item 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-4 col-xl-3  shadow">
+                        <h5 class="text-capitalize">Usefull Links</h5>
+                        <ul>
+                            <li><a href="">item 1</a></li>
+                            <li><a href="">item 2</a></li>
+                            <li><a href="">item 3</a></li>
+                            <li><a href="">item 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-4 col-xl-3  shadow">
+                        <h5 class="text-capitalize">Contact Info</h5>
+                        <ul>
+                            <li><a href="">item 1</a></li>
+                            <li><a href="">item 2</a></li>
+                            <li><a href="">item 3</a></li>
+                            <li><a href="">item 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-4 col-xl-3  shadow">
+                        <h5 class="text-capitalize">Subscribe on Our News</h5>
+                        <ul>
+                            <li><a href="">item 1</a></li>
+                            <li><a href="">item 2</a></li>
+                            <li><a href="">item 3</a></li>
+                            <li><a href="">item 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer_bottom">
+            <div class="p-5" id="copy_right">
+                <p>&copy;Bütün haklar saklıdır. 2022- <span id="now_date"></span> Design:<a href="https://www.linkedin.com/in/mertbakar/"> Mert Bakar</a>
+                </p>
+            </div>
+        </section>
+    </footer>
+    <!-- end footer -->
+
+    <!-- end codes -->
+
+    <!-- counter -->
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 5000
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+
+    <!-- body end -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- External JS -->
+    <script src="template.js"></script>
+</body>
+
+</html>

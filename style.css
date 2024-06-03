@@ -1,0 +1,368 @@
+/*
+Project made date: Sunday March 12
+-name: Portfolio
+-author: Design and coding: Mert Bakar
+-version: v.1
+-description: this is project portfolio business web design. 
+*/
+
+:root {
+    
+    --template-bg: #f9ecec;
+    --template-color: #201f1f;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --second-green:#3a5a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --best-green:#344e41;
+    --color2:#a3b18a;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --max-width: 100%;
+}
+
+/*--------------------------Common Property-------------------------------------- */
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Noto Sans Lao', sans-serif;
+    
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    color: #161616;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin: .4rem 0.5rem;
+    text-align: justify;
+}
+
+i {
+    font-size: 1.5rem;
+    opacity: .9;
+}
+
+ img {
+    max-width: 100%;
+    height: auto;
+} 
+
+img:hover {
+    cursor: pointer;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.my_clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*--------------------------Line Clamp-------------------------------------- */
+.line-clamp4 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp6 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp8 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp10 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+.line-clamp16 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;
+}
+
+/*--------------------------Navbar First-------------------------------------- */
+#navbar_first {
+    max-height: 3rem;
+    max-width: 100% !important;
+}
+
+#navbar_first span{
+    color:white!important;
+}
+
+#navbar_first i{
+margin-right:3rem;
+}
+
+#navbar_first ul li,span {
+    display: inline;
+}
+
+#navbar_first i,span {
+    font-size: 1rem;
+   
+}
+
+#navbar_first i {
+    color: #ffffff;
+    margin-right: 0.01rem;
+}
+
+#navbar_first .first_right a {
+    padding: 0.4rem;
+}
+
+.first_left {
+    float: left;
+}
+
+.first_right {
+    float: right;
+}
+
+.first_right>ul>li>a {
+    color: rgb(172, 7, 248);
+    background-color: #26083f;
+    border-radius: 10%;
+    padding: .6rem !important;
+    margin-top: 1rem !important;
+    transition: 2s all;
+}
+
+.first_right>ul>li>a:hover {
+    color: #101111;
+    background-color: white;
+}
+
+.top_bar {
+    background-color:var(--best-green)
+}
+
+.top_bar ul li i {
+    color: white;
+}
+
+/* dark */
+.dark_mode_css {
+    background-color: #101111 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+/*--------------------------Navbar Second-------------------------------------- */
+#navbar_second {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+#logo {
+    border-radius: 50% 50%;
+    width: 5rem;
+}
+
+/*--------------------------Header-------------------------------------- */
+header{
+    z-index:1;
+}
+
+.carousel-item{
+   height: 30rem;
+}
+
+
+/*--------------------------Main-------------------------------------- */
+/*########### our_work ########### */
+#our_work{
+    margin-bottom: 3rem;
+}
+
+#our_work i{
+    font-size: 4rem;
+}
+
+/*########### counter_work ###########*/
+#counter_work {
+    background-color:var(--second-green);
+    color:white;
+    margin-top:3rem;
+    padding:8rem;
+}
+
+#counter_work i{
+    font-size: 3rem;
+}
+
+#counter_work p{
+    color:white;
+}
+
+
+/*########### parallax_work ########### */
+#parallax_work{
+    background-image: url("./images/parallax.jpg");
+    background-color: rgba(0,0,0,.2);
+    color:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3rem;
+}
+
+#parallax_work .col-md-6 p{
+    text-indent: 3rem;
+    background-color: rgba(0,0,0,.6); 
+    color:white; padding:0 1rem;
+
+}
+
+/*########### aboutme_work ########### */
+#aboutme_work {
+    background-color: var(--color2);
+    padding:4rem;
+}
+
+#aboutme_work p{
+    text-indent: 3rem;
+    color:white;
+}
+
+/*########### blog_work ########### */
+#blog_work{
+    position: relative;
+}
+
+#blog_work::before{
+    position:absolute;
+    top:0;
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    content: "";
+    background-image: url('./images/blog.jpg');
+    background-size: cover;
+    opacity: .9;
+}
+
+#blog_work .card{
+    margin-bottom: 2rem;
+}
+
+#blog_work .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.8) ;
+    cursor: pointer;
+    transition: 2s all;
+}
+
+#blog_work .card img:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#blog_work .card-text{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+#blog_work img{
+    width: auto;
+    height: 20rem;
+}
+
+/*########### contact_work ########### */
+#contact_work{
+    padding:6rem;
+}
+#c_form{
+    background-color: rgba(0,0,0,.8);
+    padding:1rem;
+}
+
+/*########### backtop ########### */
+#back_top{
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    background-color: #101111;
+    padding: 0.5rem;
+    color:yellow;
+    border-radius: 0.5rem;
+}
+
+/*--------------------------Footer-------------------------------------- */
+footer{
+min-height: 20rem;
+max-width: 100%;
+background-color: #3d3d3d;
+color: white;
+
+}
+
+#footer_top{
+    padding: 3rem;
+}
+
+
+#footer_bottom {
+    background-color: #101111;
+}
+
+#footer_bottom p{
+    color: white;
+}
+
+
+/*--------------------------Responsive Design-------------------------------------- */
