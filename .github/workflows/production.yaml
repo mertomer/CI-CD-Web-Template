@@ -13,29 +13,14 @@ jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
-      - name: Kodu İndir
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Dizine Geçiş Yap ve package.json Kontrol Et
-        run: |
-          cd Son-Deneme-Web-Site
-          if [ ! -f package.json ]; then
-            echo "package.json $(pwd) dizininde bulunamadı"
-            exit 1
-          fi
-
-      - name: Vercel CLI Kur
+      - name: Install Vercel CLI
         run: npm install --global vercel
-        working-directory: Son-Deneme-Web-Site
 
-      - name: Vercel Ortam Bilgilerini Çek
+      - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: Son-Deneme-Web-Site
-
-      - name: Projeyi Derle
-        run: npm run build
-        working-directory: Son-Deneme-Web-Site
       
-      - name: Proje Artifaktlarını Dağıt
+      - name: Deploy Project Artifacts
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: Son-Deneme-Web-Site
