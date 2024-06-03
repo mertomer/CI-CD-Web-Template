@@ -16,6 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Verify package.json exists
+        run: |
+          if [ ! -f package.json ]; then
+            echo "package.json not found in $(pwd)"
+            exit 1
+          fi
+
       - name: Install Vercel CLI
         run: npm install --global vercel
 
