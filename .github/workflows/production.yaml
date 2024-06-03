@@ -16,28 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Change to project directory
-        run: cd project
-
-      - name: Verify package.json exists
-        run: |
-          if [ ! -f package.json ]; then
-            echo "package.json not found in $(pwd)"
-            exit 1
-          fi
-
       - name: Install Vercel CLI
         run: npm install --global vercel
-        working-directory: project
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: project
 
       - name: Build project
         run: npm run build
-        working-directory: project
       
       - name: Deploy Project Artifacts
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: project
