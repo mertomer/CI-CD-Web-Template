@@ -7,23 +7,35 @@ env:
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Kodu İndir
         uses: actions/checkout@v3
 
-      - name: Install Vercel CLI
+      - name: Dizine Geçiş Yap ve package.json Kontrol Et
+        run: |
+          cd Son-Deneme-Web-Site
+          if [ ! -f package.json ]; then
+            echo "package.json $(pwd) dizininde bulunamadı"
+            exit 1
+          fi
+
+      - name: Vercel CLI Kur
         run: npm install --global vercel
+        working-directory: Son-Deneme-Web-Site
 
-      - name: Pull Vercel Environment Information
+      - name: Vercel Ortam Bilgilerini Çek
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        working-directory: Son-Deneme-Web-Site
 
-      - name: Build project
+      - name: Projeyi Derle
         run: npm run build
+        working-directory: Son-Deneme-Web-Site
       
-      - name: Deploy Project Artifacts
+      - name: Proje Artifaktlarını Dağıt
         run: vercel deploy --token=${{ secrets.VERCEL_TOKEN }}
+        working-directory: Son-Deneme-Web-Site
